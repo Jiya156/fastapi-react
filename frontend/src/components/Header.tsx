@@ -18,7 +18,7 @@ const Header = () => {
       zIndex="1000"
     >
       <Flex align="center" as="nav" mr={5}>
-        <Heading as="h1" size="sm">Todos</Heading>
+        <Heading as="h1" size="sm">Todo List</Heading>
         <Separator />
       </Flex>
     </Flex>
