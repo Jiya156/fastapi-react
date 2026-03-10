@@ -30,7 +30,7 @@ pipeline {
             steps {
                 echo 'Checking services...'
                 sh '''
-                    ssh -o StrictHostKeyChecking=no azureuser@APP_VM_IP \
+                    ssh -o StrictHostKeyChecking=no azureuser@4.213.16.85 \
                     "sudo systemctl is-active fastapi && sudo systemctl is-active nginx"
                 '''
             }
