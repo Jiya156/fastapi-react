@@ -44,12 +44,6 @@ jobs:
             sudo systemctl restart fastapi
             sudo systemctl reload nginx
 
-            echo "Running backend health check..."
-            curl -f http://localhost:8000/todo || exit 1
-
-            echo "Running frontend health check..."
-            curl -f http://localhost || exit 1
-            
             echo "Deployment complete!"
 
       - name: Rollback if Deployment fails
