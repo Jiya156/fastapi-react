@@ -169,8 +169,8 @@ export default function Todos() {
   const [todos, setTodos] = useState([])
   const fetchTodos = async () => {
     const response = await fetch("/api/todo")
-    const todos = await response.json()
-    setTodos(todos.data)
+    const data = await response.json()
+    setTodos(data)
   }
   useEffect(() => {
     fetchTodos()
