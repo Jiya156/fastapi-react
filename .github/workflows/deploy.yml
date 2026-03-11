@@ -44,6 +44,9 @@ jobs:
             sudo systemctl restart fastapi
             sudo systemctl reload nginx
 
+            curl -f http://localhost:8000/todo
+            curl -f http://localhost
+
             echo "Deployment complete!"
 
       - name: Rollback if Deployment fails
