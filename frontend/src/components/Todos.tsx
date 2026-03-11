@@ -59,7 +59,7 @@ function AddTodo() {
       "item": item
     }
 
-    fetch("/api/todo", {
+    fetch("/todo", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTodo)
@@ -82,7 +82,7 @@ function AddTodo() {
 const UpdateTodo = ({ item, id, fetchTodos }: UpdateTodoProps) => {
   const [todo, setTodo] = useState(item);
   const updateTodo = async () => {
-    await fetch(`/api/todo/${id}`, {
+    await fetch(`/todo/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ item: todo }),
@@ -136,7 +136,7 @@ const UpdateTodo = ({ item, id, fetchTodos }: UpdateTodoProps) => {
 
 const DeleteTodo = ({ id, fetchTodos }: DeleteTodoProps) => {
   const deleteTodo = async () => {
-    await fetch(`/api/todo/${id}`, {
+    await fetch(`/todo/${id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id: id })
@@ -168,7 +168,7 @@ function TodoHelper({item, id, fetchTodos}: TodoHelperProps) {
 export default function Todos() {
   const [todos, setTodos] = useState([])
   const fetchTodos = async () => {
-    const response = await fetch("/api/todo")
+    const response = await fetch("/todo")
     const data = await response.json()
     setTodos(data)
   }
