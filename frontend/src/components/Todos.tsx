@@ -11,6 +11,7 @@ import {
   DialogHeader,
   DialogRoot,
   DialogTitle,
+  DialogTrigger,
   Stack,
   Text,
   DialogActionTrigger,
