@@ -40,8 +40,6 @@ jobs:
             npm install
             npm run build
 
-            exit 1
-
             echo "Restarting services..."
             sudo systemctl restart fastapi
             sudo systemctl reload nginx
